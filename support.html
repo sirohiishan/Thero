@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Thero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1B1B1B;
+            background: #FFFFFF;
+            padding: 20px;
+        }
+        
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            vertical-align: middle;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #7998FF 0%, #FF7979 100%);
+            color: #FFFFFF;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #7998FF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #FF7979;
+            transform: translateY(-2px);
+        }
+        
+        h2 {
+            color: #7998FF;
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: #1B1B1B;
+            font-size: 1.2rem;
+            margin: 25px 0 10px 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #616161;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #616161;
+        }
+        
+        .highlight {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #7998FF;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px solid #8F8F8F;
+        }
+        
+        .contact-info a {
+            color: #7998FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info h3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-info a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .feature-box {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #E0E0E0;
+            margin: 20px 0;
+        }
+        
+        .feature-box h3 {
+            color: #7998FF;
+            margin-top: 0;
+        }
+        
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+            padding-left: 40px;
+            position: relative;
+        }
+        
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #7998FF;
+            color: #FFFFFF;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Support</h1>
+            <p>Get help with Thero - Your productivity companion</p>
+        </div>
+        
+        <div class="content">
+            <h2>Getting Started</h2>
+            
+            <h3>Welcome to Thero</h3>
+            <p>Thero is a local-only productivity app that helps you manage tasks with priorities, track your productivity, and stay organized. All your data is stored exclusively on your device for complete privacy.</p>
+            
+            <div class="highlight">
+                <p><strong>Quick Start:</strong> When you first open Thero, you'll see an introduction screen. Tap "Get Started" to begin creating and managing your tasks. No account creation or login required!</p>
+            </div>
+            
+            <h2>Task Management</h2>
+            
+            <div class="feature-box">
+                <h3>Creating Tasks</h3>
+                <ul>
+                    <li>Tap the "+" button or the "Add Task" button to create a new task</li>
+                    <li>Enter your task title</li>
+                    <li>Optionally set a date and time for your task</li>
+                    <li>Tasks are automatically assigned priority numbers (1, 2, 3...) based on when you create them</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Task Priorities</h3>
+                <p>Tasks in Thero use a priority system where lower numbers mean higher priority:</p>
+                <ul>
+                    <li><strong>Priority 1</strong> is the highest priority and appears at the top of your list</li>
+                    <li>Tasks are automatically sorted by priority, with incomplete tasks shown first</li>
+                    <li>When you complete a task, it automatically moves to the bottom with the lowest priority</li>
+                    <li>You can change a task's priority by editing it - other tasks will automatically adjust</li>
+                    <li>Priority numbers are displayed next to task titles (e.g., "1.", "2.", "3.")</li>
+                    <li><strong>Note:</strong> Completed tasks cannot have their priority edited</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Editing and Deleting Tasks</h3>
+                <ul>
+                    <li><strong>Edit:</strong> Tap on any task to edit its title, date, time, or priority</li>
+                    <li><strong>Delete:</strong> Swipe left on a task to reveal the delete option, or delete from the edit screen</li>
+                    <li><strong>Complete:</strong> Tap the circle next to a task to mark it as complete</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Task Dates and Times</h3>
+                <ul>
+                    <li>You can assign dates to tasks for better organization</li>
+                    <li>Optionally set specific times for tasks (in "h:mm a" format, e.g., "9:00 AM")</li>
+                    <li>Use the calendar view to navigate between dates and see tasks for specific days</li>
+                    <li>Tasks with times will receive individual notification reminders</li>
+                    <li>Tasks with only dates (no time) will be included in daily motivational notifications</li>
+                </ul>
+            </div>
+            
+            <h2>Widgets</h2>
+            
+            <div class="feature-box">
+                <h3>Home Screen Widgets</h3>
+                <p>Thero offers interactive widgets for your home screen in two sizes:</p>
+                <ul>
+                    <li><strong>Small Widget:</strong> Displays your top priority tasks with completion status</li>
+                    <li><strong>Medium Widget:</strong> Shows more tasks with productivity statistics</li>
+                    <li><strong>Interactive:</strong> Tap task circles directly in the widget to mark tasks complete/incomplete (iOS 17+)</li>
+                    <li>Tasks in widgets are sorted by priority and show priority numbers</li>
+                    <li>There's a 5-second grace period after toggling - tap again to undo</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Lock Screen Widget</h3>
+                <ul>
+                    <li>The lock screen widget displays your daily task count above the time</li>
+                    <li>It automatically shows the number of incomplete tasks for the current day</li>
+                    <li>To add: Long-press your lock screen, tap "Customize", then add Thero's widget</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Adding Widgets</h3>
+                <ol class="step-list">
+                    <li>Long-press on your home screen or lock screen</li>
+                    <li>Tap the "+" button in the top-left corner</li>
+                    <li>Search for "Thero"</li>
+                    <li>Select the widget size you want</li>
+                    <li>Tap "Add Widget"</li>
+                    <li>Position it where you'd like on your screen</li>
+                </ol>
+            </div>
+            
+            <h2>Notifications</h2>
+            
+            <div class="feature-box">
+                <h3>Task Reminders</h3>
+                <ul>
+                    <li><strong>Tasks with Times:</strong> Receive individual notification reminders at the specified time</li>
+                    <li><strong>Tasks with Dates Only:</strong> Included in daily motivational notifications</li>
+                    <li><strong>Daily Notifications:</strong>
+                        <ul>
+                            <li>9:00 AM - Shows all tasks scheduled for the day</li>
+                            <li>9:00 PM - Shows remaining/incomplete tasks for the day</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Interactive Notification Actions</h3>
+                <p>When you receive a task notification, you can:</p>
+                <ul>
+                    <li><strong>Mark Complete:</strong> Instantly mark the task as done</li>
+                    <li><strong>Remind in 1 Hour:</strong> Get another reminder in one hour</li>
+                    <li><strong>Remind in Morning:</strong> Get a reminder at 8:30 AM</li>
+                    <li><strong>Remind in Afternoon:</strong> Get a reminder at 12:30 PM</li>
+                    <li><strong>Remind at Night:</strong> Get a reminder at 9:00 PM</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Managing Notifications</h3>
+                <ul>
+                    <li>Notifications are managed through your device's Settings app</li>
+                    <li>Go to Settings → Notifications → Thero to enable or disable notifications</li>
+                    <li>Thero uses provisional notifications, which work quietly without requiring explicit permission</li>
+                    <li>All notifications are generated locally on your device</li>
+                </ul>
+            </div>
+            
+            <h2>Productivity Tracking</h2>
+            
+            <div class="feature-box">
+                <h3>Monthly Productivity Score</h3>
+                <ul>
+                    <li>View your monthly productivity in the "My Month" view</li>
+                    <li>Productivity score is calculated as: (completed tasks / total tasks) × 100</li>
+                    <li>Track your progress throughout the month</li>
+                    <li>View task completion statistics and analytics</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Task History</h3>
+                <ul>
+                    <li>View all your tasks with filtering options</li>
+                    <li><strong>Filter by:</strong> All Time, Past, Upcoming, or Custom date range</li>
+                    <li>Search functionality to quickly find specific tasks</li>
+                    <li>All historical data is stored locally on your device</li>
+                </ul>
+            </div>
+            
+            <h2>Settings</h2>
+            
+            <div class="feature-box">
+                <h3>Display Name</h3>
+                <ul>
+                    <li>Set a custom display name in Settings</li>
+                    <li>Tap the pencil icon next to your name to edit it</li>
+                    <li>Your name is stored locally and used for personalization</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>App Reset</h3>
+                <p><strong>Warning:</strong> This action cannot be undone!</p>
+                <ul>
+                    <li>Resetting the app will permanently delete all your tasks, settings, and data</li>
+                    <li>This includes: tasks, widget data, notifications, display name, and onboarding status</li>
+                    <li>To reset: Go to Settings → Reset App → Confirm</li>
+                </ul>
+            </div>
+            
+            <h2>Troubleshooting</h2>
+            
+            <div class="feature-box">
+                <h3>Widgets Not Updating</h3>
+                <ul>
+                    <li>Make sure Background App Refresh is enabled for Thero in Settings → Thero → Background App Refresh</li>
+                    <li>Try removing and re-adding the widget</li>
+                    <li>Restart your device if widgets still don't update</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Widget Buttons Not Working</h3>
+                <ul>
+                    <li>Interactive widgets require iOS 17.0 or later</li>
+                    <li>Check your iOS version in Settings → General → About</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Notifications Not Appearing</h3>
+                <ul>
+                    <li>Check that notifications are enabled in Settings → Notifications → Thero</li>
+                    <li>Make sure your device is not in Do Not Disturb mode</li>
+                    <li>Verify that tasks have dates and/or times set</li>
+                    <li>Check that your device's system time is correct</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Tasks Not Syncing Between App and Widgets</h3>
+                <ul>
+                    <li>Widget interactions update immediately in the widget</li>
+                    <li>Changes sync to the main app when it's running</li>
+                    <li>If the app is closed, changes will sync when you next open it</li>
+                    <li>There's a 5-second grace period after widget interactions - you can tap again to undo</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <h3>App Performance</h3>
+                <ul>
+                    <li>Thero automatically filters tasks to show only the last 60 days and next 365 days for optimal performance</li>
+                    <li>Tasks outside this range remain in storage but aren't loaded into active memory</li>
+                    <li>If the app feels slow, try closing and reopening it</li>
+                    <li>All data is stored locally, so no internet connection is required</li>
+                </ul>
+            </div>
+            
+            <h2>Privacy and Data</h2>
+            
+            <div class="highlight">
+                <p><strong>Important:</strong> Thero is a completely local application. All your data is stored exclusively on your device. We do not collect, transmit, or store any data on remote servers. For more details, see our <a href="https://sirohiishan.github.io/Thero/privacy-policy.html" style="color: #7998FF; text-decoration: underline;">Privacy Policy</a>.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Data Storage</h3>
+                <ul>
+                    <li>All tasks, settings, and data are stored locally on your device</li>
+                    <li>Data is protected by iOS device encryption</li>
+                    <li>No cloud sync or backup services are used</li>
+                    <li>If you delete the app, all data is removed from your device</li>
+                </ul>
+            </div>
+            
+            <h2>Contact Support</h2>
+            
+            <div class="contact-info">
+                <h3><span class="material-symbols-outlined">support_agent</span> Need Help?</h3>
+                <p>If you're experiencing issues or have questions that aren't covered here, we're here to help!</p>
+                <p><strong>Email:</strong> <a href="mailto:sirohi.ishan@icloud.com?subject=Thero Support Request"><span class="material-symbols-outlined">email</span> sirohi.ishan@icloud.com</a></p>
+                
+                <h3 style="margin-top: 20px;"><span class="material-symbols-outlined">info</span> What to Include</h3>
+                <p>When contacting support, please include:</p>
+                <ul>
+                    <li>A description of the issue or question</li>
+                    <li>Your iOS version (Settings → General → About)</li>
+                    <li>Steps to reproduce the issue (if applicable)</li>
+                    <li>Screenshots (if helpful)</li>
+                </ul>
+            </div>
+            
+            <h2>Additional Resources</h2>
+            
+            <div class="feature-box">
+                <h3>Privacy Policy</h3>
+                <p>Learn more about how Thero handles your data and protects your privacy. <a href="https://sirohiishan.github.io/Thero/privacy-policy.html" style="color: #7998FF; text-decoration: underline;">View Privacy Policy</a></p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>App Features</h3>
+                <ul>
+                    <li><strong>Priority-based Task Management:</strong> Organize tasks by importance</li>
+                    <li><strong>Interactive Widgets:</strong> Complete tasks from your home screen</li>
+                    <li><strong>Productivity Tracking:</strong> Monitor your progress with monthly insights</li>
+                    <li><strong>Local Notifications:</strong> Get reminders for your tasks</li>
+                    <li><strong>Calendar Integration:</strong> View and organize tasks by date</li>
+                    <li><strong>Task History:</strong> Search and filter your past tasks</li>
+                    <li><strong>100% Local:</strong> All data stays on your device</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
