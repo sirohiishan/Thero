@@ -193,7 +193,8 @@
             <h3>Task and Content Data</h3>
             <ul>
                 <li><strong>Task Content</strong>: The tasks and reminders you create in the app, including task titles</li>
-                <li><strong>Task Metadata</strong>: Task completion status, creation dates, scheduling information, and optional time settings</li>
+                <li><strong>Task Metadata</strong>: Task completion status, creation dates, scheduling information, optional time settings, and priority levels</li>
+                <li><strong>Task Priority</strong>: Priority numbers (1 = highest priority, 2 = second priority, 3 = third priority, etc.) assigned to tasks for ordering and organization. Tasks are automatically sorted by priority level, with higher priority tasks (lower numbers) appearing first in the list. When you add a new task, it automatically receives the next available priority number. When you change a task's priority, other tasks automatically adjust their priorities to maintain proper ordering. Priority numbers are displayed next to task titles throughout the app and widgets (e.g., "1.", "2.", "3.")</li>
                 <li><strong>Task Dates</strong>: Dates you assign to tasks for organization and scheduling</li>
                 <li><strong>Task Times</strong>: Optional time settings for tasks (in "h:mm a" format) used for scheduling notifications</li>
                 <li><strong>Calendar Data</strong>: Your selected dates, task organization, and scheduling preferences</li>
@@ -204,7 +205,7 @@
             
             <h3>Local Device Data</h3>
             <ul>
-                <li><strong>Widget Data</strong>: Task lists, productivity scores, task statistics, and completion states cached locally in iOS App Groups (identifier: group.sirohiishan.Moro) for widget functionality. This includes data for small and medium home screen widgets, and lock screen accessoryInline widget.</li>
+                <li><strong>Widget Data</strong>: Task lists with priority numbers, productivity scores, task statistics, and completion states cached locally in iOS App Groups (identifier: group.sirohiishan.Moro) for widget functionality. This includes data for small and medium home screen widgets, and lock screen accessoryInline widget. Tasks are sorted by priority in widgets and display priority numbers next to task titles</li>
                 <li><strong>Widget Interaction Data</strong>: Task completion toggles from widgets, grace period timestamps (5-second undo period for widget interactions), and pending sync information stored locally</li>
                 <li><strong>Notification Data</strong>: Local notification settings, scheduled task reminders, daily motivational notifications (9 AM for all tasks, 9 PM for remaining tasks), and interactive notification action preferences stored on your device using iOS UserNotifications framework</li>
                 <li><strong>Background Task Data</strong>: Cached task data for background app refresh and widget updates, stored locally in App Groups</li>
@@ -217,9 +218,9 @@
             
             <h3>Core App Functionality</h3>
             <ul>
-                <li><strong>Task Management</strong>: Store and manage your tasks locally on your device with support for dates and optional times</li>
+                <li><strong>Task Management</strong>: Store and manage your tasks locally on your device with support for dates, optional times, and priority levels. Tasks are automatically sorted by priority (with priority 1 being the highest priority and appearing at the top of the list). New tasks automatically receive the next available priority number. When you change a task's priority, the system automatically adjusts other tasks' priorities to maintain proper ordering. Priority numbers are displayed next to task titles (e.g., "1.", "2.", "3.") in the main task list, task history view, and widgets</li>
                 <li><strong>Local Notifications</strong>: Send you reminders for scheduled tasks with specific times using iOS local notifications. For tasks with times, individual notifications are scheduled. For date-only tasks, daily motivational notifications are scheduled at 9 AM (showing all tasks for the day) and 9 PM (showing remaining/incomplete tasks). Interactive notification actions include: Mark Complete, Remind in 1 Hour, Remind in Morning (8:30 AM), Remind in Afternoon (12:30 PM), and Remind at Night (9:00 PM)</li>
-                <li><strong>Widget Functionality</strong>: Display task lists, productivity statistics, and task completion status on your device's home screen (small and medium sizes) and lock screen (accessoryInline) with interactive task completion directly from home screen widgets</li>
+                <li><strong>Widget Functionality</strong>: Display task lists with priority numbers, productivity statistics, and task completion status on your device's home screen (small and medium sizes) and lock screen (accessoryInline) with interactive task completion directly from home screen widgets. Tasks in widgets are sorted by priority and display priority numbers (e.g., "1.", "2.", "3.") next to task titles</li>
                 <li><strong>Interactive Home Screen Widgets</strong>: Allow you to toggle task completion directly from home screen widgets without opening the app, with a 5-second grace period for undo. Task completion changes are synced back to local storage</li>
                 <li><strong>Lock Screen Widget</strong>: Displays daily task count above the time on your device's lock screen, automatically updating to show incomplete tasks for the current day</li>
                 <li><strong>Background Updates</strong>: Background app refresh and processing to keep widgets synchronized with local data. Background tasks explicitly do not require network connectivity</li>
@@ -309,7 +310,7 @@
             <ul>
                 <li><strong>Update Information</strong>: Modify your display name and monthly goals in Settings</li>
                 <li><strong>Delete Tasks</strong>: Delete individual tasks through swipe-to-delete or edit functionality</li>
-                <li><strong>Edit Tasks</strong>: Edit task titles, dates, and times at any time</li>
+                <li><strong>Edit Tasks</strong>: Edit task titles, dates, times, and priority levels at any time. When you change a task's priority, the system automatically adjusts other tasks' priorities to maintain proper ordering. Priority numbers are displayed next to task titles throughout the app (e.g., "1.", "2.", "3.") and update automatically when priorities change</li>
                 <li><strong>Reset App</strong>: Clear all data and reset the app to default state through Settings</li>
                 <li><strong>Data Correction</strong>: Edit or delete tasks, modify monthly goals, and correct any inaccurate information</li>
                 <li><strong>Notification Control</strong>: Manage local notification settings through your device's system settings. You can enable or disable notifications at any time</li>
