@@ -198,8 +198,7 @@
                 <li><strong>Task Dates</strong>: Dates you assign to tasks for organization and scheduling</li>
                 <li><strong>Task Times</strong>: Optional time settings for tasks (in "h:mm a" format) used for scheduling notifications</li>
                 <li><strong>Calendar Data</strong>: Your selected dates, task organization, and scheduling preferences</li>
-                <li><strong>Productivity Data</strong>: Monthly productivity scores calculated locally based on task completion statistics, monthly task goals, and productivity analytics displayed in widgets and monthly views</li>
-                <li><strong>Monthly Goals</strong>: Your selected monthly task goal (stored as an integer value) used for productivity tracking</li>
+                <li><strong>Productivity Data</strong>: Monthly productivity scores calculated locally based on task completion statistics and productivity analytics displayed in widgets and monthly views</li>
             </ul>
             <p><strong>All task data is stored locally on your device only using iOS UserDefaults.</strong></p>
             
@@ -208,7 +207,7 @@
                 <li><strong>Widget Data</strong>: Task lists with priority numbers, productivity scores, task statistics, and completion states cached locally in iOS App Groups (identifier: group.sirohiishan.Moro) for widget functionality. This includes data for small and medium home screen widgets, and lock screen accessoryInline widget. Tasks are sorted by priority in widgets and display priority numbers next to task titles</li>
                 <li><strong>Widget Interaction Data</strong>: Task completion toggles from widgets, grace period timestamps (5-second undo period for widget interactions), and pending sync information stored locally</li>
                 <li><strong>Cross-Process Communication</strong>: Darwin notifications (CFNotificationCenter) used for communication between the main app and widget extensions to sync task completion changes - processed locally only</li>
-                <li><strong>Notification Data</strong>: Local notification settings, scheduled task reminders, daily motivational notifications (9 AM for all tasks, 9 PM for remaining tasks), and interactive notification action preferences stored on your device using iOS UserNotifications framework. Daily notifications are scheduled for the next 7 days in advance</li>
+                <li><strong>Notification Data</strong>: Local notification settings, scheduled task reminders, daily motivational notifications (9 AM for all tasks, 9 PM for remaining tasks), and interactive notification action preferences stored on your device using iOS UserNotifications framework. Daily motivational notifications are scheduled 7 days in advance. Individual task notifications (for tasks with specific times) are scheduled for the next 30 days in advance</li>
                 <li><strong>Background Task Data</strong>: Cached task data for background app refresh and widget updates, stored locally in App Groups</li>
                 <li><strong>App Preferences</strong>: User interface preferences, settings, and onboarding completion status stored locally on your device</li>
                 <li><strong>Deep Link Data</strong>: Deep link handling for widget interactions (moro://addtask for adding tasks, moro://monthview for monthly productivity view) - processed locally only</li>
@@ -227,7 +226,6 @@
                 <li><strong>Background Updates</strong>: Background app refresh and processing to keep widgets synchronized with local data. Background tasks explicitly do not require network connectivity</li>
                 <li><strong>Calendar Integration</strong>: Organize tasks by date with visual calendar view for date selection and provide calendar views with monthly productivity tracking</li>
                 <li><strong>Productivity Tracking</strong>: Calculate and display monthly productivity scores, task completion statistics, and productivity analytics locally. Productivity scores are calculated as: (completed tasks / total tasks) × 100</li>
-                <li><strong>Monthly Goals</strong>: Set and track monthly task goals (options: 10, 15, 20, 25, 30, 40, 50 tasks per month) for productivity motivation</li>
                 <li><strong>Task History</strong>: View historical tasks with filtering options (All Time, Past, Upcoming, Custom date range) and search functionality - all data stored and processed locally</li>
                 <li><strong>Deep Linking</strong>: Support for deep links from widgets to add tasks (moro://addtask) or view monthly productivity (moro://monthview) - processed locally only</li>
             </ul>
@@ -236,16 +234,16 @@
             <ul>
                 <li><strong>Local Storage</strong>: All data is stored securely on your device using iOS UserDefaults and App Groups (group.sirohiishan.Moro) for sharing data between the main app and widget extensions</li>
                 <li><strong>Data Protection</strong>: Your data is protected by iOS device encryption and security features, including App Group sandboxing</li>
-                <li><strong>Data Filtering</strong>: The app automatically filters tasks when loading data to keep only tasks from the last 60 days and next 365 days in active memory for optimal performance. Tasks outside this range remain in storage but are not loaded into active memory</li>
+                <li><strong>Data Filtering</strong>: The app automatically filters tasks when loading data to keep only tasks from the last 60 days and next 365 days in active memory for optimal performance. Tasks outside this range remain in storage but are not loaded into active memory. This filtering applies to the main app interface; task history view can access all stored tasks</li>
                 <li><strong>Input Sanitization</strong>: Task titles are sanitized to prevent security issues (HTML entities are escaped)</li>
                 <li><strong>No Network Transmission</strong>: No data is transmitted from your device to any remote servers. The app works completely offline</li>
             </ul>
             
             <h3>User Experience</h3>
             <ul>
-                <li><strong>Personalization</strong>: Customize the app experience based on your preferences stored locally (display name, monthly goals)</li>
-                <li><strong>Settings Management</strong>: Update your name, set monthly goals, and manage app settings - all stored locally</li>
-                <li><strong>Onboarding</strong>: Track onboarding completion status to show appropriate screens on first launch</li>
+                <li><strong>Personalization</strong>: Customize the app experience based on your preferences stored locally (display name)</li>
+                <li><strong>Settings Management</strong>: Update your name and manage app settings - all stored locally</li>
+                <li><strong>Onboarding</strong>: Track onboarding completion status and interactive tutorial progress to show appropriate screens on first launch. The tutorial guides users through key features: adding tasks, setting dates/times, managing priorities, and editing/deleting tasks</li>
                 <li><strong>App Reset</strong>: Ability to reset the app and clear all local data</li>
             </ul>
             
@@ -300,8 +298,8 @@
             
             <h3>Access Rights</h3>
             <ul>
-                <li><strong>View Your Data</strong>: Access all your tasks, account information (display name), monthly goals, and app data through the app</li>
-                <li><strong>Account Information</strong>: View and update your profile information (display name) and monthly goals in Settings</li>
+                <li><strong>View Your Data</strong>: Access all your tasks, account information (display name), and app data through the app</li>
+                <li><strong>Account Information</strong>: View and update your profile information (display name) in Settings</li>
                 <li><strong>Task History</strong>: View all your tasks with filtering options (All Time, Past, Upcoming, Custom date range) and search functionality</li>
                 <li><strong>Productivity Data</strong>: View your monthly productivity scores, task completion statistics, and productivity analytics in the "My Month" view</li>
                 <li><strong>Widget Data</strong>: View cached widget data through the app's widget interface</li>
@@ -309,11 +307,11 @@
             
             <h3>Control Rights</h3>
             <ul>
-                <li><strong>Update Information</strong>: Modify your display name and monthly goals in Settings</li>
+                <li><strong>Update Information</strong>: Modify your display name in Settings</li>
                 <li><strong>Delete Tasks</strong>: Delete individual tasks through swipe-to-delete or edit functionality</li>
                 <li><strong>Edit Tasks</strong>: Edit task titles, dates, times, and priority levels at any time. Completed tasks cannot have their priority edited. When you change a task's priority, the system automatically adjusts other tasks' priorities to maintain proper ordering. The app automatically renumbers priorities to ensure they remain sequential (1, 2, 3...) with incomplete tasks first, followed by completed tasks. Priority numbers are displayed next to task titles throughout the app (e.g., "1.", "2.", "3.") and update automatically when priorities change</li>
                 <li><strong>Reset App</strong>: Clear all data and reset the app to default state through Settings</li>
-                <li><strong>Data Correction</strong>: Edit or delete tasks, modify monthly goals, and correct any inaccurate information</li>
+                <li><strong>Data Correction</strong>: Edit or delete tasks and correct any inaccurate information</li>
                 <li><strong>Notification Control</strong>: Manage local notification settings through your device's system settings. You can enable or disable notifications at any time</li>
                 <li><strong>Widget Control</strong>: Control widget data through task management in the app. Home screen widget interactions (task completion) sync back to local storage. Lock screen widget displays task count automatically</li>
             </ul>
@@ -321,7 +319,7 @@
             <h3>Deletion Rights</h3>
             <ul>
                 <li><strong>Task Deletion</strong>: Delete individual tasks at any time through the app interface</li>
-                <li><strong>App Reset</strong>: Reset the app to clear all data and settings, including tasks, widget data, notifications, cached data, display name, monthly goals, and onboarding status</li>
+                <li><strong>App Reset</strong>: Reset the app to clear all data and settings, including tasks, widget data, notifications, cached data, display name, and onboarding status</li>
                 <li><strong>Local Data</strong>: All local data (widgets, notifications, cached data) can be cleared through app reset</li>
                 <li><strong>Complete Control</strong>: You have complete control over all your data as it's stored locally on your device</li>
                 <li><strong>App Uninstallation</strong>: Uninstalling the app removes all data from your device</li>
@@ -349,7 +347,7 @@
             <ul>
                 <li><strong>Notifications</strong>: Stored locally on your device using iOS UserNotifications framework, cleared when app is reset</li>
                 <li><strong>Widget Cache</strong>: Productivity data cached for widgets in App Groups, cleared when app is reset</li>
-                <li><strong>App Preferences</strong>: Display name, monthly goals, onboarding status stored locally, cleared when app is reset</li>
+                <li><strong>App Preferences</strong>: Display name, onboarding status, and tutorial progress stored locally, cleared when app is reset</li>
             </ul>
             
             <h2>8. Children's Privacy</h2>

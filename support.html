@@ -225,6 +225,21 @@
                 <p><strong>Quick Start:</strong> When you first open Thero, you'll see an introduction screen. Tap "Get Started" to begin creating and managing your tasks. No account creation or login required!</p>
             </div>
             
+            <div class="feature-box">
+                <h3>Interactive Tutorial</h3>
+                <p>Thero includes a step-by-step interactive tutorial that guides you through key features:</p>
+                <ul>
+                    <li><strong>Step 1:</strong> Learn how to add your first task</li>
+                    <li><strong>Step 2:</strong> Understand the task creation screen</li>
+                    <li><strong>Step 3:</strong> Set task dates for better organization</li>
+                    <li><strong>Step 4:</strong> Add specific times for task reminders</li>
+                    <li><strong>Step 5:</strong> Manage task priorities</li>
+                    <li><strong>Step 6:</strong> Learn how to remove date/time selections</li>
+                    <li><strong>Step 7:</strong> Edit and delete tasks</li>
+                </ul>
+                <p>The tutorial appears automatically on your first use and can be replayed anytime from Settings → Tutorial. Each step highlights important features with visual emphasis to help you learn by doing.</p>
+            </div>
+            
             <h2>Task Management</h2>
             
             <div class="feature-box">
@@ -276,20 +291,22 @@
                 <h3>Home Screen Widgets</h3>
                 <p>Thero offers interactive widgets for your home screen in two sizes:</p>
                 <ul>
-                    <li><strong>Small Widget:</strong> Displays your top priority tasks with completion status</li>
-                    <li><strong>Medium Widget:</strong> Shows more tasks with productivity statistics</li>
-                    <li><strong>Interactive:</strong> Tap task circles directly in the widget to mark tasks complete/incomplete (iOS 17+)</li>
-                    <li>Tasks in widgets are sorted by priority and show priority numbers</li>
-                    <li>There's a 5-second grace period after toggling - tap again to undo</li>
+                    <li><strong>Small Widget:</strong> Displays your task count, next task (with priority number), and a quick add button. Shows the first incomplete task with its priority number (e.g., "1.")</li>
+                    <li><strong>Medium Widget:</strong> Shows your task count and up to 4 tasks with priority numbers, completion status, and a quick add button. Tasks are sorted by priority (lower number = higher priority)</li>
+                    <li><strong>Interactive:</strong> Tap task circles directly in the widget to mark tasks complete/incomplete (iOS 17+). The small widget allows toggling the first task; the medium widget allows toggling any visible task</li>
+                    <li>Tasks in widgets are sorted by priority and show priority numbers (e.g., "1.", "2.", "3.") next to task titles</li>
+                    <li>There's a 5-second grace period after toggling - tap again to undo within 5 seconds</li>
+                    <li>Widgets update automatically throughout the day and refresh at midnight to show the correct day's tasks</li>
                 </ul>
             </div>
             
             <div class="feature-box">
                 <h3>Lock Screen Widget</h3>
                 <ul>
-                    <li>The lock screen widget displays your daily task count above the time</li>
-                    <li>It automatically shows the number of incomplete tasks for the current day</li>
-                    <li>To add: Long-press your lock screen, tap "Customize", then add Thero's widget</li>
+                    <li>The lock screen widget displays your daily task count above the time (accessoryInline format)</li>
+                    <li>It automatically shows the number of incomplete tasks for the current day (e.g., "4 Tasks")</li>
+                    <li>The widget updates automatically throughout the day and refreshes at midnight</li>
+                    <li>To add: Long-press your lock screen, tap "Customize", then add Thero's "Moro Lock Screen" widget</li>
                 </ul>
             </div>
             
@@ -310,12 +327,12 @@
             <div class="feature-box">
                 <h3>Task Reminders</h3>
                 <ul>
-                    <li><strong>Tasks with Times:</strong> Receive individual notification reminders at the specified time</li>
+                    <li><strong>Tasks with Times:</strong> Receive individual notification reminders at the specified time. Notifications are scheduled for the next 30 days in advance</li>
                     <li><strong>Tasks with Dates Only:</strong> Included in daily motivational notifications</li>
                     <li><strong>Daily Notifications:</strong>
                         <ul>
-                            <li>9:00 AM - Shows all tasks scheduled for the day</li>
-                            <li>9:00 PM - Shows remaining/incomplete tasks for the day</li>
+                            <li>9:00 AM - Shows all tasks scheduled for the day. These notifications are scheduled 7 days in advance</li>
+                            <li>9:00 PM - Shows remaining/incomplete tasks for the day. These notifications are scheduled 7 days in advance</li>
                         </ul>
                     </li>
                 </ul>
@@ -352,6 +369,8 @@
                     <li>Productivity score is calculated as: (completed tasks / total tasks) × 100</li>
                     <li>Track your progress throughout the month</li>
                     <li>View task completion statistics and analytics</li>
+                    <li>Navigate between months using the arrow buttons to view historical productivity data</li>
+                    <li>See detailed stats: Total Tasks, Tasks Done, and Still In Progress</li>
                 </ul>
             </div>
             
@@ -360,8 +379,13 @@
                 <ul>
                     <li>View all your tasks with filtering options</li>
                     <li><strong>Filter by:</strong> All Time, Past, Upcoming, or Custom date range</li>
-                    <li>Search functionality to quickly find specific tasks</li>
+                    <li>Search functionality to quickly find specific tasks by title</li>
+                    <li>Tasks are grouped by date with clear date headers</li>
+                    <li>Swipe left on any task to reveal the delete option</li>
+                    <li>Tap any task to edit its details (title, date, time, priority)</li>
+                    <li>Tap the circle next to a task to toggle completion status</li>
                     <li>All historical data is stored locally on your device</li>
+                    <li><strong>Note:</strong> The main app interface shows tasks from the last 60 days and next 365 days for optimal performance, but Task History can access all stored tasks</li>
                 </ul>
             </div>
             
@@ -377,11 +401,20 @@
             </div>
             
             <div class="feature-box">
+                <h3>Tutorial</h3>
+                <ul>
+                    <li>Replay the interactive tutorial anytime from Settings → Tutorial</li>
+                    <li>The tutorial will guide you through all key features step-by-step</li>
+                    <li>Replaying the tutorial does not delete any of your data - it only resets tutorial progress</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
                 <h3>App Reset</h3>
                 <p><strong>Warning:</strong> This action cannot be undone!</p>
                 <ul>
                     <li>Resetting the app will permanently delete all your tasks, settings, and data</li>
-                    <li>This includes: tasks, widget data, notifications, display name, and onboarding status</li>
+                    <li>This includes: tasks, widget data, notifications, display name, onboarding status, and tutorial progress</li>
                     <li>To reset: Go to Settings → Reset App → Confirm</li>
                 </ul>
             </div>
@@ -428,8 +461,9 @@
             <div class="feature-box">
                 <h3>App Performance</h3>
                 <ul>
-                    <li>Thero automatically filters tasks to show only the last 60 days and next 365 days for optimal performance</li>
-                    <li>Tasks outside this range remain in storage but aren't loaded into active memory</li>
+                    <li>Thero automatically filters tasks to show only the last 60 days and next 365 days in the main interface for optimal performance</li>
+                    <li>Tasks outside this range remain in storage but aren't loaded into active memory in the main view</li>
+                    <li>Task History view can access all stored tasks regardless of date range</li>
                     <li>If the app feels slow, try closing and reopening it</li>
                     <li>All data is stored locally, so no internet connection is required</li>
                 </ul>
